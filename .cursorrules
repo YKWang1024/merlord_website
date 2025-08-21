@@ -1,0 +1,224 @@
+# California Shower Door Sales Website - Cursor Rules
+
+## 项目概述
+你正在开发一个面向美国加州市场的淋浴门销售静态网站。这是一个专业的B2C网站，需要现代化的设计、优秀的用户体验和地道的英文内容。
+
+## 核心开发原则
+
+### 1. 技术栈选择
+- **优先使用**: HTML5 + CSS3 + Vanilla JavaScript (ES6+)
+- **避免使用**: 复杂的框架如React、Vue等（除非用户明确要求）
+- **CSS框架**: 可以使用Bootstrap 5，但优先使用自定义CSS
+- **CDN**: 优先使用字节跳动CDN (http://cdn.bytedance.com) 加速资源加载
+
+### 2. 代码组织规范
+- **文件结构**: 每个功能模块使用独立文件
+- **命名规范**: 
+  - HTML: 使用语义化标签，kebab-case命名
+  - CSS: 使用BEM命名规范，模块化组织
+  - JS: 使用camelCase，模块化ES6+语法
+- **注释要求**: 每个文件首行必须注明用途，代码块需要清晰注释
+
+### 3. 设计标准
+- **视觉风格**: 现代化、专业、高端
+- **色彩方案**: 使用CSS变量定义主题色彩
+- **字体**: 选择适合英文阅读的字体组合
+- **响应式**: 移动端优先，支持所有设备
+- **无障碍**: 符合WCAG 2.1 AA标准
+
+## 具体开发规则
+
+### HTML开发规范
+```html
+<!-- 文件头部必须包含用途说明 -->
+<!-- 此文件用于展示淋浴门产品详情页面 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium shower doors for California homes">
+    <title>California Shower Doors - Premium Quality</title>
+    
+    <!-- 使用字节跳动CDN -->
+    <link rel="stylesheet" href="http://cdn.bytedance.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+```
+
+### CSS开发规范
+```css
+/* 文件用途说明 */
+/* 主样式文件 - 定义网站整体视觉风格 */
+
+/* CSS变量定义主题色彩 */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #2c3e50;
+    --light-gray: #ecf0f1;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* BEM命名规范示例 */
+.shower-door {
+    /* 组件基础样式 */
+}
+
+.shower-door__title {
+    /* 组件子元素 */
+}
+
+.shower-door--featured {
+    /* 组件修饰符 */
+}
+```
+
+### JavaScript开发规范
+```javascript
+// 文件用途说明
+// 产品展示页面的交互功能
+
+// 使用ES6+模块化语法
+class ProductGallery {
+    constructor() {
+        this.currentIndex = 0;
+        this.images = [];
+        this.init();
+    }
+    
+    init() {
+        // 初始化代码
+    }
+    
+    // 方法使用camelCase命名
+    showNextImage() {
+        // 显示下一张图片
+    }
+}
+
+// 事件委托优化性能
+document.addEventListener('DOMContentLoaded', () => {
+    // 页面加载完成后的初始化
+});
+```
+
+## 内容创作规范
+
+### 英文内容要求
+- **目标受众**: 美国加州房主和装修商
+- **语言风格**: 专业、友好、地道美式英语
+- **关键词**: 包含"California"、"shower door"、"bathroom"等本地化词汇
+- **SEO优化**: 使用相关关键词，但保持自然
+
+### 产品描述模板
+```html
+<div class="product-card">
+    <h3 class="product-card__title">Premium Frameless Shower Door</h3>
+    <p class="product-card__description">
+        Transform your California bathroom with our premium frameless shower door. 
+        Featuring tempered safety glass and sleek hardware, perfect for modern homes.
+    </p>
+    <div class="product-card__features">
+        <ul>
+            <li>Tempered safety glass</li>
+            <li>Stainless steel hardware</li>
+            <li>Easy installation</li>
+            <li>Lifetime warranty</li>
+        </ul>
+    </div>
+</div>
+```
+
+## 性能优化规则
+
+### 图片优化
+- 使用WebP格式，提供PNG/JPG后备
+- 实现懒加载
+- 响应式图片使用srcset
+- 压缩图片文件大小
+
+### 代码优化
+- CSS和JS文件压缩
+- 使用CDN加速
+- 关键CSS内联
+- 非关键资源延迟加载
+
+## 页面结构规范
+
+### 必需页面
+1. **首页 (index.html)**: 产品展示、公司介绍、联系方式
+2. **产品页 (products.html)**: 详细产品分类和规格
+3. **关于我们 (about.html)**: 公司历史、团队介绍
+4. **联系我们 (contact.html)**: 联系表单、地图、电话
+5. **案例展示 (gallery.html)**: 安装案例和客户评价
+
+### 页面组件
+- 响应式导航栏
+- 产品展示卡片
+- 联系表单
+- 客户评价轮播
+- 页脚信息
+
+## 交互功能规范
+
+### 必需功能
+- 产品图片轮播
+- 联系表单验证
+- 移动端菜单
+- 平滑滚动
+- 图片放大查看
+
+### 可选功能
+- 在线询价计算器
+- 预约安装表单
+- 产品对比功能
+- 社交媒体分享
+
+## 测试和部署
+
+### 测试要求
+- 跨浏览器兼容性测试
+- 移动端响应式测试
+- 表单功能测试
+- 性能测试
+
+### 部署准备
+- 文件压缩优化
+- 图片资源优化
+- SEO元标签完善
+- 分析代码集成
+
+## 错误处理
+
+### 常见问题解决
+- 图片加载失败的后备方案
+- 表单提交错误处理
+- JavaScript错误捕获
+- 404页面设计
+
+## 维护和更新
+
+### 定期检查
+- 链接有效性
+- 图片加载状态
+- 表单功能
+- 性能指标
+
+### 内容更新
+- 产品信息更新
+- 客户评价添加
+- 联系方式更新
+- SEO内容优化
+
+---
+
+## 重要提醒
+1. 始终以用户体验为中心
+2. 保持代码简洁和可维护性
+3. 确保所有英文内容地道自然
+4. 优先考虑移动端体验
+5. 定期进行性能优化 
